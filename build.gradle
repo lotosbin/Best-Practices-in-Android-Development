@@ -31,18 +31,20 @@ dependencies {
 */
 
 buildscript {
-    ext.kotlin_version = '1.3.10'
+    ext.kotlin_version = '1.4.32'
     repositories {
-        jcenter()
+        google()
+        mavenCentral()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.2.1'
+        classpath 'com.android.tools.build:gradle:4.2.0-beta06'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
     }
 }
 allprojects {
     repositories {
-        jcenter()
+        google()
+        mavenCentral()
     }
 }
 subprojects {
@@ -52,4 +54,4 @@ subprojects {
         }
     }
 }
-apply from: 'https://raw.githubusercontent.com/lotosbin/Best-Practices-in-Android-Development/master/xtask/tools/resource_prefix.gradle'
+apply from: 'https://raw.githubusercontent.com/lotosbin/Best-Practices-in-Android-Development/master/tools/resource_prefix.gradle'
